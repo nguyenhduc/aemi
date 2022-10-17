@@ -4,15 +4,19 @@ import ProductDetail from '@/interfaces/productDetail';
 defineProps<{
   product: ProductDetail
 }>()
+
+const formatCurrency = (current: number) => {
+  return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(current)
+}
 </script>
 
 <template>
-  <div class="product-card">
+  <div class="product-card cursor-pointer">
     <div class="medal-star d-flex flex-center">
       <img class="icon" src="@/assets/svg/medal-star.svg" alt="icon medal star" />
       <span class="medal-star__explain">Tem nhà phân phối</span>
     </div>
-    <div class="product-image-wrapper">
+    <div class="product-image-wrapper d-flex flex-center">
       <div class="product-image" :style="{ 'background-image': 'url(' + product.thumbnail + ')' }"></div>
     </div>
     <div class="product-detail">
@@ -31,7 +35,7 @@ defineProps<{
         <span class="stock">Còn {{ product.stock_quantity }}</span>
       </div>
       <div class="product-price d-flex">
-        <span class="price">{{ product.discounted_price }}{{ product.price_currency}}</span>
+        <span class="price">{{ formatCurrency(product.discounted_price) }}</span>
         <span class="grow-1" />
         <span class="discount d-flex flex-center" v-if="product.discount_percentage">- {{ product.discount_percentage
         }}%</span>
@@ -52,9 +56,22 @@ defineProps<{
   background-color: #F5F6F7;
 }
 
+@media (min-width: 768px) {
+  .product-card:hover>.product-image-wrapper>.product-image {
+    width: 242px;
+    height: 222px;
+  }
+
+  .product-image-wrapper {
+    width: 270px;
+    height: 255px;
+  }
+}
+
 .product-card:hover>.medal-star>.medal-star__explain {
   display: block;
 }
+
 
 .medal-star {
   height: 26px;

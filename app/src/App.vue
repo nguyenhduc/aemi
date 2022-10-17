@@ -47,7 +47,7 @@ categoryStore.fetchCategories();
         </div>
       </div>
       <div class="right-col">
-        <div class="product-wrapper justify-center">
+        <div class="product-wrapper">
           <ItemCard v-for="product in productStore.products" :product="product" />
         </div>
       </div>
@@ -65,6 +65,7 @@ categoryStore.fetchCategories();
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+  justify-content: flex-start;
 }
 
 .brands,
@@ -98,6 +99,7 @@ categoryStore.fetchCategories();
 @media (max-width: 768px) {
   .product-wrapper {
     gap: 20px;
+    justify-content: center;
   }
 }
 

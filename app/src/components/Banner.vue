@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="banner">
+  <div class="banner cursor-pointer">
   </div>
 </template>
 
