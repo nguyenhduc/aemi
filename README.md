@@ -87,7 +87,13 @@ make docker
 2. Start the Vite app
 
 ```
-make app-pnpm run dev
+make run dev
+```
+
+3. (Optional) This will clean the Aemi Docker Dev environment entirely, allowing you to start from scratch.
+
+```
+make clean
 ```
 
 ## Installing
@@ -104,8 +110,10 @@ pnpm dev
 
 ## Built Using <a name = "built_using"></a>
 
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 - [VueJs](https://vuejs.org/) - Web Framework
 - [Pinia](https://pinia.vuejs.org/) - State management
+- [ViteJs](https://vitejs.dev/) - Build tool that aims to provide a faster and leaner development experience for modern web projects
 
 ## Acknowledgement
 
