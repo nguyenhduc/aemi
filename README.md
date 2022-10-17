@@ -8,15 +8,18 @@
 
 ## Table of Contents
 
-- [Assignment brief](#assignment_brief)
-- [Requirement](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Table of Contents](#table-of-contents)
+- [Assignment brief <a name = "assignment_brief"></a>](#assignment-brief-)
+- [Interpreting <a name = "interpreting"></a>](#interpreting-)
+- [Source code structure <a name = "code_structure"></a>](#source-code-structure-)
+- [Using Docker <a name = "using_docker"></a>](#using-docker-)
+  - [Prerequisites](#prerequisites)
+  - [Steps](#steps)
+- [Installing](#installing)
+- [Built Using <a name = "built_using"></a>](#built-using-)
+- [Acknowledgement](#acknowledgement)
+- [Room for improvements <a name = "acknowledgement"></a>](#room-for-improvements-)
+- [Authors <a name = "authors"></a>](#authors-)
 
 ## Assignment brief <a name = "assignment_brief"></a>
 
@@ -26,7 +29,7 @@ Implement a catalog page to:
 - Customers can interact with the filter bar to filter products by brands and categories.
 - Adaptive banner.
 
-## Interpreting
+## Interpreting <a name = "interpreting"></a>
 
 - The test comes with a designated design so there should be thoughts for scalable and maintainable CSS structure.
 - SSR
@@ -36,57 +39,67 @@ Implement a catalog page to:
 aemi-app
 
 - assets
-  - images
   - css
+    - colors
+    - elements
+    - input
+    - normalize
+    - responsive-breakpoint
+    - typography
+    - utilities
+  - images
   - svg
 - src
   - components
+    - Header
+    - Footer
+    - Banner
+    - ItemCard
   - interfaces
+    - ProductDetail
   - stores
+    - BrandStore
+    - CategoryStore
+    - ProductStore
   - App.vue
   - main.ts
   - styles.css
 
+## Using Docker <a name = "using_docker"></a>
+
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+- Make sure you have already installed Docker Engine.
 
 ```
-Give examples
+docker -v
+Docker version 20.10.17, build 100c701
 ```
 
-### Installing
+### Steps
 
-A step by step series of examples that tell you how to get a development env running.
+1. Build the Docker image:
+
+```
+make docker
+```
+
+2. Start the Vite app
+
+```
+make app-pnpm run dev
+```
+
+## Installing
 
 ```
 pnpm i
 ```
 
-Run the project
+Run the app
 
 ```
 pnpm dev
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## Running the app <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Built Using <a name = "built_using"></a>
@@ -94,15 +107,16 @@ Give an example
 - [VueJs](https://vuejs.org/) - Web Framework
 - [Pinia](https://pinia.vuejs.org/) - State management
 
-## Authors <a name = "authors"></a>
-
-- [@nguyenhduc](https://github.com/nguyenhduc) - Participated in the test.
-
 ## Acknowledgement
 
-- Due to my current health and the challenge time was up few hours.
+- Due to my current health and the challenge time was up to few hours of implementing this test result was incomplete in term of requirements
+  - Interacting filters
 
-## Improvements <a name = "acknowledgement"></a>
+## Room for improvements <a name = "acknowledgement"></a>
 
 - UI library for faster development
 - ITCSS for Scalable and Maintainable CSS Architecture
+
+## Authors <a name = "authors"></a>
+
+- [@nguyenhduc](https://github.com/nguyenhduc) - Participated in the test.
