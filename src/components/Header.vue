@@ -13,9 +13,6 @@
       </div>
     </div>
   </header>
-  <div class="sidebar">
-
-  </div>
 </template>
 
 <style scoped>
@@ -45,13 +42,5 @@ header {
 
 .action-bar {
   margin-left: auto
-}
-
-.sidebar {
-  width: 239px;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  z-index: 1001;
 }
 </style>

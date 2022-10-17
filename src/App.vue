@@ -8,8 +8,6 @@ import { useBrandStore } from '@/stores/BrandStore';
 import { useCategoryStore } from '@/stores/CategoryStore';
 import { ref } from 'vue';
 
-const searchBrand = ref('')
-const searchCategory = ref('')
 const productStore = useProductStore();
 const brandStore = useBrandStore();
 const categoryStore = useCategoryStore();
@@ -29,7 +27,7 @@ categoryStore.fetchCategories();
           <div class="title">
             Thương hiệu
           </div>
-          <input class="app-input" v-model="searchBrand" placeholder="Tìm kiếm thương hiệu" type="text" />
+          <input class="app-input" placeholder="Tìm kiếm thương hiệu" type="text" />
           <div class="filter-wrapper">
             <div class="filter-item cursor-pointer" v-for="brand in brandStore.brands">
               {{brand.brand_name}}
@@ -40,7 +38,7 @@ categoryStore.fetchCategories();
           <div class="title">
             Danh mục
           </div>
-          <input class="app-input" v-model="searchCategory" placeholder="Tìm kiếm danh mục" type="text" />
+          <input class="app-input" placeholder="Tìm kiếm danh mục" type="text" />
           <div class="filter-wrapper styled-scrollbars">
             <div class="filter-item cursor-pointer" v-for="category in categoryStore.categories">
               {{category.category_name}}
@@ -54,7 +52,6 @@ categoryStore.fetchCategories();
         </div>
       </div>
     </div>
-
   </main>
   <Footer />
 </template>
