@@ -1,0 +1,6 @@
+:root {
+  --mobile-min: 570px;
+  --mobile-max: 768px;
+  --screen-min: 990px;
+  --screen-max: 1200px;
+}
