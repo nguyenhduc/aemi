@@ -1,8 +1,8 @@
 TAG?=16-alpine
-PORT?=3000
+PORT?=8000
 APP_DIR?=app
 
-.PHONY: clean docker app-pnpm app-sh
+.PHONY: clean docker run
 
 clean:
 	rm -rf .pnpm-store
@@ -15,14 +15,14 @@ docker:
 		--build-arg TAG=${TAG} \
 		--no-cache
 	docker container run \
-		--name vitejs-build-dev \
+		--name aemi-build-dev \
 		--rm \
 		-t \
 		-v "${CURDIR}":/app \
 		-e APP_DIR=${APP_DIR} \
 		aemi/aemi-test:${TAG} \
 		docker-config/docker.sh
-app-pnpm:
+run:
 	docker container run \
 		--name aemi-test \
 		--rm \
