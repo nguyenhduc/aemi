@@ -1,6 +1,11 @@
-# Vue 3 + TypeScript + Vite
+# AMEI
 
-This repository contains the source code for Aemi assignment.
+This repository contains the source code for Aemi assignment. Written in Vue 3 + TypeScript + Vite
+
+There're improvements could be made:
+
+- Adding UI library for styling support
+- Product item should be layout with Grid
 
 ## Project setup
 
@@ -8,7 +13,7 @@ This repository contains the source code for Aemi assignment.
 pnpm install
 ```
 
-### Compiles and hot-reloads for development
+### Start dev server
 
 ```
 pnpm dev
