@@ -39,14 +39,9 @@ Implement a catalog page to:
 aemi-app
 
 - assets
-  - css
-    - colors
-    - elements
-    - input
-    - normalize
-    - responsive-breakpoint
-    - typography
-    - utilities
+  - styles
+    - main
+    - settings
   - images
   - svg
 - src
@@ -54,16 +49,21 @@ aemi-app
     - Header
     - Footer
     - Banner
-    - ItemCard
+    - Product
+    - Filter
   - interfaces
     - ProductDetail
+    - Brand
+    - Category
+  - pages
+    - Home
+    - Not Found
   - stores
     - BrandStore
     - CategoryStore
     - ProductStore
   - App.vue
   - main.ts
-  - styles.css
 
 ## Using Docker <a name = "using_docker"></a>
 

@@ -1,5 +1,5 @@
 TAG?=16-alpine
-PORT?=8000
+PORT?=3333
 APP_DIR?=app
 
 .PHONY: clean docker run

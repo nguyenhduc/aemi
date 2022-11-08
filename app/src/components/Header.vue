@@ -1,32 +1,20 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <header>
-    <div class="container d-flex align-center">
-      <img class="screen-hide cursor-pointer" src="@/assets/svg/menu.svg" />
-      <img class="brand" src="@/assets/svg/brand.svg" />
-      <div class="action-bar">
-        <img class="cursor-pointer" src="@/assets/svg/notification.svg" />
-        <img class="cursor-pointer" src="@/assets/svg/account.svg" />
-        <img class="cursor-pointer" src="@/assets/svg/cart.svg" />
-      </div>
+  <header flex justify-center fixed bg-brand-primary w-full p5>
+    <div flex items-center h-full w-6xl>
+      <i i-aemi-icon-menu icon24 md:hidden />
+      <img class="brand" src="../assets/svg/brand.svg">
+      <i cursor-pointer i-aemi-icon-notification icon28 ml-a mr-2 hidden md:block />
+      <i cursor-pointer i-aemi-icon-account icon28 mr-2 hidden md:block />
+      <i cursor-pointer i-aemi-icon-cart icon28 ml-a md:ml-0 />
     </div>
   </header>
 </template>
 
 <style scoped>
 header {
-  position: fixed;
-  background-color: var(--color-main);
-  width: 100%;
   height: var(--header-height);
   top: 0;
   z-index: 1000;
-}
-
-.brand {
-  height: 36px;
 }
 
 @media screen and (max-width: 768px) {
@@ -37,10 +25,5 @@ header {
     transform: translate(-50%, -50%);
     height: 23px;
   }
-}
-
-
-.action-bar {
-  margin-left: auto
 }
 </style>

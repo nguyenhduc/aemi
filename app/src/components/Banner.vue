@@ -1,9 +1,5 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <div class="banner cursor-pointer">
-  </div>
+  <div class="banner cursor-pointer" />
 </template>
 
 <style scoped>

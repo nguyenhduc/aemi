@@ -1,70 +1,79 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <footer>
-    <div class="container footer d-flex space-around">
-      <div class="logo mobile-hide">
-        <img class="brand m-b-10" src="@/assets/svg/brand-vertical.svg" />
-        <div>
+  <nav flex justify-center bg-brand-primary w-full text-white p5 md:p12>
+    <div font-300 md:font-400 h-full w-6xl justify-between flex flex-col md:flex-row>
+      <div text-center hidden md:block>
+        <img src="@/assets/svg/brand-vertical.svg">
+        <div mt-6>
           © Aemi, 2022
         </div>
       </div>
-      <div class="info">
-        <div class="bold-title">CÔNG TY TNHH AEMI</div>
-        <p>Địa chỉ: Lầu 4, Tòa nhà TSA, 22-24 Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, TPHCM</p>
-        <p>Hotline: 1800-646847</p>
-        <p>Email: hello@aemi.vn</p>
-        <p>Giấy phép ĐKKD: 0317056900 (Ngày 29 tháng 11 năm 2021, Sở KHĐT TP. HCM)</p>
-
-        <div class="bold-title">HỖ TRỢ KHÁCH HÀNG</div>
-        <p>Thông tin bảo mật</p>
-        <p>Điều khoản bán hàng</p>
-        <p>Chính sách hoàn trả</p>
-        <p>Chính sách giao hàng</p>
-        <p>Chính sách thanh toán</p>
-      </div>
-      <div class="social d-flex">
-        <div>
-          <div class="bold-title">MẠNG XÃ HỘI</div>
-          <p class="d-flex align-center"><img class="m-r" src="@/assets/svg/instagram.svg" /> Instagram</p>
-          <p class="d-flex align-center"><img class="m-r" src="@/assets/svg/facebook.svg" /> Facebook</p>
-          <p class="d-flex align-center"><img class="m-r" src="@/assets/svg/zalo.svg" /> Zalo</p>
-          <p class="d-flex align-center"><img class="m-r" src="@/assets/svg/Tiktok.svg" /> Tiktok</p>
+      <div>
+        <div font-semibold mb text-lg>
+          CÔNG TY TNHH AEMI
         </div>
-        <div class="grow-1" />
-        <div class="logo screen-hide">
-          <img class="brand m-b-10" src="@/assets/svg/brand-vertical.svg" />
-          <div>
+        <p mb>
+          Địa chỉ: Lầu 4, Tòa nhà TSA, 22-24 Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, TPHCM
+        </p>
+        <p mb>
+          Hotline: 1800-646847
+        </p>
+        <p mb>
+          Email: hello@aemi.vn
+        </p>
+        <p mb-8>
+          Giấy phép ĐKKD: 0317056900 (Ngày 29 tháng 11 năm 2021, Sở KHĐT TP. HCM)
+        </p>
+        <div font-semibold mb text-lg>
+          HỖ TRỢ KHÁCH HÀNG
+        </div>
+        <a mb flex rel="noreferrer" href="#" target="_blank" title="Thông tin bảo mật">
+          Thông tin bảo mật
+        </a>
+        <a mb flex rel="noreferrer" href="#" target="_blank" title="Điều khoản bán hàng">
+          Điều khoản bán hàng
+        </a>
+        <a mb flex rel="noreferrer" href="#" target="_blank" title="Chính sách hoàn trả">
+          Chính sách hoàn trả
+        </a>
+        <a mb flex rel="noreferrer" href="#" target="_blank" title="Chính sách giao hàng">
+          Chính sách giao hàng
+        </a>
+        <a mb flex rel="noreferrer" href="#" target="_blank" title="Chính sách thanh toán">
+          Chính sách thanh toán
+        </a>
+      </div>
+      <div flex>
+        <div>
+          <div font-semibold mb text-lg>
+            MẠNG XÃ HỘI
+          </div>
+          <a mb flex rel="noreferrer" href="https://instagram.com" target="_blank" title="Instagram">
+            <i i-aemi-icon-instagram icon24 mr-3 />
+            Instagram
+          </a>
+          <a mb flex rel="noreferrer" href="https://facebook.com" target="_blank" title="Facebook">
+            <i i-aemi-icon-facebook icon24 mr-3 />
+            Facebook
+          </a>
+          <a mb flex rel="noreferrer" href="https://zalo.vn" target="_blank" title="Zalo">
+            <i i-aemi-icon-zalo icon24 mr-3 />
+            Zalo
+          </a>
+          <a mb flex rel="noreferrer" href="https://tiktok.com" target="_blank" title="Tiktok">
+            <i i-aemi-icon-tiktok icon24 mr-3 />
+            Tiktok
+          </a>
+        </div>
+        <div block md:hidden ml-a>
+          <img src="@/assets/svg/brand-vertical.svg">
+          <div mt-6>
             © Aemi, 2022
           </div>
         </div>
       </div>
     </div>
-
-  </footer>
+  </nav>
 </template>
 
 <style scoped>
-footer {
-  color: #fff;
-  background-color: #416EC2;
-  padding: 3.125rem 0;
-}
-
-.bold-title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-  }
-
-  .container {
-    justify-content: space-between;
-  }
-}
 </style>

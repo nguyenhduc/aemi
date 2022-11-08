@@ -1,15 +1,15 @@
-import { defineStore } from "pinia";
-export const useBrandStore = defineStore("BrandStore", {
+import { defineStore } from 'pinia'
+import type Brand from '@/interfaces/Brand'
+export const useBrandStore = defineStore('BrandStore', {
   state: () => {
     return {
-      brands: [],
-      selectedBrands: []
-    };
+      brands: [] as Brand[],
+    }
   },
   actions: {
     async fetchBrands() {
-      this.brands = (await import('@/data/brands.json')).default;
+      this.brands = (await import('@/data/brands.json')).default
     },
   },
   // getters
-});
+})
